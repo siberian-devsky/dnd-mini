@@ -1,16 +1,37 @@
 {
     "players": {
-        "hero": {"wins": 0,"losses": 0},
-        "villain": {"wins": 0,"losses": 0}
+        "hero": {
+            "wins": 0,
+            "losses": 0
+        },
+        "villain": {
+            "wins": 0,
+            "losses": 0
+        }
     },
     "matches": [
         {
             "matchId": 1,
             "maxRounds": 3,
             "rounds": [
-                { "round": 1, "heroRoll": 1, "villainRoll": 0, "winner": "hero" },
-                { "round": 2, "heroRoll": 0, "villainRoll": 1, "winner": "villain" },
-                { "round": 3, "heroRoll": 0, "villainRoll": 1, "winner": "villain" }
+                {
+                    "round": 1,
+                    "heroRoll": 1,
+                    "villainRoll": 0,
+                    "winner": "hero" 
+                },
+                {
+                    "round": 2,
+                    "heroRoll": 0,
+                    "villainRoll": 1,
+                    "winner": "villain" 
+                },
+                {
+                    "round": 3,
+                    "heroRoll": 0,
+                    "villainRoll": 1,
+                    "winner": "villain"
+                }
             ],
             "winner": "villain"
         }
