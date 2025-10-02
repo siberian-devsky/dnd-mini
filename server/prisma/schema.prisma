@@ -19,6 +19,7 @@ model Player {
   type    String
   wins    Int
   losses  Int
+  name    String @default("boonanner")
 }
 
 model Match {
