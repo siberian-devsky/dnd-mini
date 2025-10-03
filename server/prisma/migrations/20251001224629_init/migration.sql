@@ -9,7 +9,7 @@ CREATE TABLE `Player` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `Match` (
+CREATE TABLE `fight` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `maxRounds` INTEGER NOT NULL DEFAULT 3,
     `winner` VARCHAR(191) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE `Match` (
 -- CreateTable
 CREATE TABLE `Round` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `matchId` INTEGER NOT NULL,
+    `fightId` INTEGER NOT NULL,
     `roundNum` INTEGER NOT NULL,
     `heroRoll` INTEGER NOT NULL,
     `villainRoll` INTEGER NOT NULL,
@@ -30,4 +30,4 @@ CREATE TABLE `Round` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Round` ADD CONSTRAINT `Round_matchId_fkey` FOREIGN KEY (`matchId`) REFERENCES `Match`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Round` ADD CONSTRAINT `Round_fightId_fkey` FOREIGN KEY (`fightId`) REFERENCES `fight`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

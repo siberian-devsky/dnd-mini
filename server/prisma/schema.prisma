@@ -22,7 +22,7 @@ model Player {
   name    String @default("boonanner")
 }
 
-model Match {
+model Fight {
   id        Int @id @default(autoincrement())
   maxRounds Int @default(3)
   rounds    Round[]
@@ -31,8 +31,8 @@ model Match {
 
 model Round {
   id          Int @id @default(autoincrement())
-  match       Match @relation(fields: [matchId], references: [id])
-  matchId     Int
+  fight       Fight @relation(fields: [fightId], references: [id])
+  fightId     Int
   roundNum    Int
   heroRoll    Int
   villainRoll Int
