@@ -2,10 +2,11 @@
   "name": "dnd-mini",
   "version": "1.0.0",
   "description": "",
-  "main": "server/app.js",
+  "main": "client/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server/app.js"
+    "server": "npx nodemon server/app.js",
+    "client": "npx serve client"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "jest": "^30.2.0",
+    "nodemon": "^3.1.10",
     "prisma": "^6.16.3"
   }
 }
