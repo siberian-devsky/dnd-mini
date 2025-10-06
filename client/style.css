@@ -35,11 +35,17 @@ nav {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-#gameField {
+#statusField {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    font-size: xx-large;
+    color: rgb(1, 42, 31);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: italic;
     width: 60vw;
     height: 300px;
     border: 1px black solid;
@@ -51,7 +57,8 @@ nav {
     border: 1px black solid;
 }
 
-#gameField.fieldBorder, #scoreBoard.fieldBorder {
+#statusField.fieldBorder,
+#scoreBoard.fieldBorder {
     border: 2px solid whitesmoke;
     border-radius: 5px;
 }
@@ -77,10 +84,44 @@ nav {
     font-size: 2rem;
 }
 
+#diceFieldsWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 140px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.dieWrapper {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
 /* position each face */
-.face:nth-child(1) {transform: rotateY(0deg) translateZ(50px);} /* front */
-.face:nth-child(2) {transform: rotateY(180deg) translateZ(50px);} /* back */
-.face:nth-child(3) {transform: rotateY(90deg) translateZ(50px);} /* right */
-.face:nth-child(4) {transform: rotateY(-90deg) translateZ(50px);} /* left */
-.face:nth-child(5) {transform: rotateX(90deg) translateZ(50px);} /* top */
-.face:nth-child(6) {transform: rotateX(-90deg) translateZ(50px);} /* bottom */
+.face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50px);
+} /* front */
+.face:nth-child(2) {
+    transform: rotateY(180deg) translateZ(50px);
+} /* back */
+.face:nth-child(3) {
+    transform: rotateY(90deg) translateZ(50px);
+} /* right */
+.face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(50px);
+} /* left */
+.face:nth-child(5) {
+    transform: rotateX(90deg) translateZ(50px);
+} /* top */
+.face:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(50px);
+} /* bottom */
