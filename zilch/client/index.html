@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>KILL DICE</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav>
+            <button>Menu</button>
+            <button>New</button>
+        </nav>
+        <main>
+            <section id="gameField" class="fieldBorder">
+                <div class="die" id="dieOne" onclick="rollDie()">
+                    <div class="face" data-value="1"></div>
+                    <div class="face" data-value="6"></div>
+                    <div class="face" data-value="2"></div>
+                    <div class="face" data-value="5"></div>
+                    <div class="face" data-value="3"></div>
+                    <div class="face" data-value="4"></div>
+                </div>
+                <div class="die" id="dieTwo" onclick="rollDie()">
+                    <div class="face" data-value="1"></div>
+                    <div class="face" data-value="6"></div>
+                    <div class="face" data-value="2"></div>
+                    <div class="face" data-value="5"></div>
+                    <div class="face" data-value="3"></div>
+                    <div class="face" data-value="4"></div>
+                </div>
+            </section>
+            <section id="scoreBoard" class="fieldBorder"></section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
