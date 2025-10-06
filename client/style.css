@@ -7,7 +7,7 @@ html {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: rgb(95, 81, 226);
+    background: rgb(3, 107, 30);
 }
 
 main {
@@ -51,11 +51,15 @@ nav {
     border: 1px black solid;
 }
 
+#gameField.fieldBorder, #scoreBoard.fieldBorder {
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+}
+
 .die {
     position: relative;
     width: 100px;
     height: 100px;
-    border: 2px solid black;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(0deg);
     transition: transform 1s ease;
@@ -65,7 +69,8 @@ nav {
     position: absolute;
     width: 100px;
     height: 100px;
-    border: 2px solid black;
+    border: 2px solid rgba(133, 0, 0, 0.86);
+    border-radius: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
