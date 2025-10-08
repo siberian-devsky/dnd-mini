@@ -151,13 +151,14 @@ nav > button:hover {
     height: 100vh;
     backdrop-filter: blur(7px);
     z-index: 1000;
-    transform: translateY(35px);
+    transform: translateY(40px);
+    overflow: hidden;
 }
 
 #instructionsModal {
     position: fixed;
-    width: 500px;
-    height: 300px;
+    width: 800px;
+    height: 500px;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -70%);
@@ -169,10 +170,19 @@ nav > button:hover {
     font-weight: 700;
     color: crimson;
     padding: 0 15px;
+    /* margin-top: 2rem; */
+    border-radius: var(--border-radius)
+}
+
+#modalContent {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 2rem;
 }
 
 #closeModalBtn {
     position: absolute;
+    z-index: 2000;
     right: 15px;
     top: 10px;
     border: none;
