@@ -55,5 +55,17 @@ async function loadFaces() {
         })
     })
 }
+    
+function toggleInstructions() {
+    const instructionsEl = document.querySelector("#instructionsModalContainer");
+	const cssVars = window.getComputedStyle(instructionsEl);
+    const isVisible = cssVars.visibility === "visible" ? true : false;
+
+    if (isVisible) {
+        instructionsEl.style.visibility = "hidden";
+    } else {
+        instructionsEl.style.visibility = "visible";
+    }
+}
 
 loadFaces()

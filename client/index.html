@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>KILL DICE</title>
+        <title>Zilch</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <nav>
             <button>Menu</button>
             <button>New</button>
+            <button onclick="toggleInstructions()">?</button>
         </nav>
         <main>
             <section id="statusField" class="fieldBorder">
-                <P>FIFTY BUCKS SAYS I WIN EVERY TIME</P>
+                <p>FIFTY BUCKS SAYS I WIN EVERY TIME</p>
             </section>
-            <section id="diceFieldsWrapper">
+            <section id="diceFieldsContainer" class="fieldBorder">
                 <div class="dieWrapper">
                     <div class="die" id="dieOne" onclick="rollDie()">
                         <div class="face" data-value="1"></div>
@@ -81,6 +85,46 @@
                     </div>
                 </div>
             </section>
+            <div id="instructionsModalContainer">
+                <!-- for bluring> -->
+                <div id="instructionsModal">
+                    <button id="closeModalBtn" onclick="toggleInstructions()">
+                        close
+                    </button>
+                    <p>Roll all six dice.</p>
+                    <p>
+                        Identify and “freeze” (set aside) one or more scoring
+                        dice (see Scoring below) and add the score to the
+                        player’s total for the turn.
+                    </p>
+                    <p>
+                        If no scoring dice are rolled (a “zilch”), the turn is
+                        over, and the player scores 0 for that turn. The dice
+                        are then passed to the next player.
+                    </p>
+                    <p>
+                        If desired, the player may continue rolling the
+                        remaining (unfrozen) dice in an attempt to increase
+                        their score for the turn. However, they must freeze some
+                        combination of scoring dice on each roll. If no scoring
+                        dice are rolled, it results in a zilch, and the player
+                        scores 0 for the turn.
+                    </p>
+                    <p>
+                        If the player freezes all six dice, they have the option
+                        to “turn the corner” and roll all six dice again to
+                        continue adding to their score. If a zilch occurs after
+                        turning the corner, the player loses all points accrued
+                        during the turn, including those before and after the
+                        corner was turned.
+                    </p>
+                    <p>
+                        If the player chooses not to roll again and has not
+                        zilched, they add the score for the turn to their total
+                        and pass the dice to the next player.
+                    </p>
+                </div>
+            </div>
         </main>
         <script src="app.js"></script>
     </body>
