@@ -25,11 +25,6 @@ app.post("/api/parrot", (req, res) => {
         .status(400)
         .json({
             message: 'no data to parrot',
-            timestamp: new Date().toDateString(),
-            timestamp: new Date().toLocaleDateString(),
-            timestamp: new Date().toLocaleString(),
-            timestamp: new Date().toLocaleTimeString(),
-            timestamp: new Date().toTimeString(),
             timestamp: new Date().toUTCString()
         })
     }
