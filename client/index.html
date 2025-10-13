@@ -24,65 +24,83 @@
                 <p>FIFTY BUCKS SAYS I WIN EVERY TIME</p>
             </section>
             <section id="diceFieldsContainer" class="fieldBorder">
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldOne">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieOne" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnOne" onclick="lockDie(this.id, '#dieOne')">Lock</button>
                 </div>
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldTwo">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieTwo" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnTwo" onclick="lockDie(this.id, '#dieTwo')">Lock</button>
                 </div>
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldThree">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieThree" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnThree" onclick="lockDie(this.id, '#dieThree')">Lock</button>
                 </div>
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldFour">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieFour" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnFour" onclick="lockDie(this.id, '#dieFour')">Lock</button>
                 </div>
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldFive">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieFive" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnFive" onclick="lockDie(this.id, '#dieFive')">Lock</button>
                 </div>
-                <div class="dieWrapper">
-                    <div class="die" id="dieOne" onclick="rollDie()">
-                        <div class="face" data-value="1"></div>
-                        <div class="face" data-value="6"></div>
-                        <div class="face" data-value="2"></div>
-                        <div class="face" data-value="5"></div>
-                        <div class="face" data-value="3"></div>
-                        <div class="face" data-value="4"></div>
+                <div class="dieField" id="dieFieldSix">
+                    <div class="dieWrapper">
+                        <div class="die" id="dieSix" onclick="rollDie()">
+                            <div class="face" data-value="1"></div>
+                            <div class="face" data-value="6"></div>
+                            <div class="face" data-value="2"></div>
+                            <div class="face" data-value="5"></div>
+                            <div class="face" data-value="3"></div>
+                            <div class="face" data-value="4"></div>
+                        </div>
                     </div>
+                    <button class="lockBtn" id="lockBtnSix" onclick="lockDie(this.id, '#dieSix')">Lock</button>
                 </div>
             </section>
             <div id="instructionsModalContainer">
