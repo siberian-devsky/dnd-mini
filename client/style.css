@@ -178,7 +178,6 @@ nav > button:hover {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: rgb(255, 156, 156);
-    padding: 0 15px;
     border-radius: var(--border-radius)
 }
 
@@ -189,9 +188,15 @@ nav > button:hover {
 }
 
 #modalContent > h1 {
-    color: white;
+    color: rgb(206, 82, 82);
     font-size: x-large;
 }
+#modalContent > p {
+    color: rgb(3, 107, 30);
+    font-size: medium;
+}
+
+modal
 
 .modalContentScroll {
     overflow-y: auto;         /* enable scrolling */
@@ -212,8 +217,13 @@ nav > button:hover {
     border: none;
     background: none;
     cursor: pointer;
-    color: rgb(234, 255, 3);
+    color: rgba(234, 255, 3, 0.6);
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: medium;
+}
+
+#closeModalBtn:hover {
+    border: 1px solid rgba(234, 255, 3, 0.6);
+    border-radius: var(--border-radius);
 }

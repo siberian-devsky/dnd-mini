@@ -2,8 +2,8 @@ const dice = document.querySelectorAll(".die");
 
 function rollDie() {
     dice.forEach((die) => {
-        const x = 90 * Math.floor(Math.random() * 8);
-        const y = 90 * Math.floor(Math.random() * 8);
+        const x = 90 * Math.floor(Math.random() * 12);
+        const y = 90 * Math.floor(Math.random() * 12);
 
         const isLocked = die.dataset.locked === "true";
 
@@ -75,23 +75,31 @@ function toggleInstructions() {
     }
 }
 
-function lockDie(buttonId, dieId) {
+function lockDie(dieWrapperId, buttonId, dieId) {
     const targetDie = document.querySelector(dieId);
-    const lockButton = document.querySelector(`#${buttonId}`);
+    const targetLockBtn = document.querySelector(`#${buttonId}`);
+    const targetDieWrapper = document.querySelector(dieWrapperId);
 
     const isLocked = targetDie.dataset.locked === "true";
 
     if (isLocked) {
         // unlock
+        targetDieWrapper.style.transform = null;   
+        targetDieWrapper.style.opacity = "1";
         targetDie.dataset.locked = "false";
-        lockButton.style.background = null;
-        lockButton.textContent = "Lock";
+        targetLockBtn.style.background = null;
+        targetLockBtn.textContent = "Freeze";
     } else {
         // lock
+        targetDieWrapper.style.transition = "transform 500ms ease";
+        targetDieWrapper.style.transform = "scale(0.9)";
+        targetDieWrapper.style.opacity = "0.5";
         targetDie.dataset.locked = "true";
-        lockButton.style.background = "rgba(255, 0, 0, 0.75)";
-        lockButton.textContent = "Locked";
+        targetLockBtn.style.background = "rgb(255, 0, 0)";
+        targetLockBtn.textContent = "Frozen";
+
     }
 }
+
 
 loadFaces();

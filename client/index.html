@@ -25,7 +25,7 @@
             </section>
             <section id="diceFieldsContainer" class="fieldBorder">
                 <div class="dieField" id="dieFieldOne">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperOne">
                         <div class="die" id="dieOne" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -35,10 +35,16 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnOne" onclick="lockDie(this.id, '#dieOne')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnOne"
+                        onclick="lockDie('#dieWrapperOne', this.id, '#dieOne')"
+                    >
+                        Freeze
+                    </button>
                 </div>
                 <div class="dieField" id="dieFieldTwo">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperTwo">
                         <div class="die" id="dieTwo" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -48,10 +54,16 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnTwo" onclick="lockDie(this.id, '#dieTwo')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnTwo"
+                        onclick="lockDie('#dieWrapperTwo', this.id, '#dieTwo')"
+                    >
+                        Freeze
+                    </button>
                 </div>
                 <div class="dieField" id="dieFieldThree">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperThree">
                         <div class="die" id="dieThree" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -61,10 +73,16 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnThree" onclick="lockDie(this.id, '#dieThree')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnThree"
+                        onclick="lockDie('#dieWrapperThree', this.id, '#dieThree')"
+                    >
+                        Freeze
+                    </button>
                 </div>
                 <div class="dieField" id="dieFieldFour">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperFour">
                         <div class="die" id="dieFour" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -74,10 +92,16 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnFour" onclick="lockDie(this.id, '#dieFour')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnFour"
+                        onclick="lockDie('#dieWrapperFour', this.id, '#dieFour')"
+                    >
+                        Freeze
+                    </button>
                 </div>
                 <div class="dieField" id="dieFieldFive">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperFive">
                         <div class="die" id="dieFive" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -87,10 +111,16 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnFive" onclick="lockDie(this.id, '#dieFive')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnFive"
+                        onclick="lockDie('#dieWrapperFive', this.id, '#dieFive')"
+                    >
+                        Freeze
+                    </button>
                 </div>
                 <div class="dieField" id="dieFieldSix">
-                    <div class="dieWrapper">
+                    <div class="dieWrapper" id="dieWrapperSix">
                         <div class="die" id="dieSix" onclick="rollDie()">
                             <div class="face" data-value="1"></div>
                             <div class="face" data-value="6"></div>
@@ -100,67 +130,106 @@
                             <div class="face" data-value="4"></div>
                         </div>
                     </div>
-                    <button class="lockBtn" id="lockBtnSix" onclick="lockDie(this.id, '#dieSix')">Lock</button>
+                    <button
+                        class="lockBtn"
+                        id="lockBtnSix"
+                        onclick="lockDie('#dieWrapperSix', this.id, '#dieSix')"
+                    >
+                        Freeze
+                    </button>
                 </div>
             </section>
             <div id="instructionsModalContainer">
                 <!-- for bluring> -->
                 <div id="instructionsModal">
-                    <button id="closeModalBtn" onclick="toggleInstructions()">close</button>
-                    <div id="modalContent" class="modalContentScroll">
+                    <button id="closeModalBtn" onclick="toggleInstructions()">
+                        close
+                    </button>
+                    <div
+                        id="modalContent"
+                        class="modalContentScroll"
+                        style="
+                            background-color: rgba(0, 0, 0, 0.85);
+                            backdrop-filter: blur(5px);
+                            padding: 20px;
+                            border-radius: 12px;
+                            color: #fff;
+                        "
+                    >
                         <h1>GAMEPLAY</h1>
                         <p>Roll all six dice.</p>
                         <p>
-                            Identify and “freeze” (set aside) one or more scoring
-                            dice (see Scoring below) and add the score to the
-                            player’s total for the turn.
+                            Freeze one or more scoring dice and add them to your
+                            turn score.
                         </p>
                         <p>
-                            If no scoring dice are rolled (a “zilch”), the turn is
-                            over, and the player scores 0 for that turn. The dice
-                            are then passed to the next player.
+                            If no scoring dice appear (a “zilch”), your turn
+                            ends with 0 points.
                         </p>
                         <p>
-                            If desired, the player may continue rolling the
-                            remaining (unfrozen) dice in an attempt to increase
-                            their score for the turn. However, they must freeze some
-                            combination of scoring dice on each roll. If no scoring
-                            dice are rolled, it results in a zilch, and the player
-                            scores 0 for the turn.
+                            You may roll remaining unfrozen dice to try to score
+                            more, but you must freeze at least one scoring die
+                            each roll.
                         </p>
                         <p>
-                            If the player freezes all six dice, they have the option
-                            to “turn the corner” and roll all six dice again to
-                            continue adding to their score. If a zilch occurs after
-                            turning the corner, the player loses all points accrued
-                            during the turn, including those before and after the
-                            corner was turned.
+                            If all six dice are frozen, you may “turn the
+                            corner” and roll all six again. A zilch after
+                            cornering loses all turn points.
                         </p>
                         <p>
-                            If the player chooses not to roll again and has not
-                            zilched, they add the score for the turn to their total
-                            and pass the dice to the next player.
+                            You can stop rolling at any time before a zilch to
+                            bank your points and pass the dice.
                         </p>
+
                         <h1>SCORING</h1>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
-                        <p>tbd</p>
+                        <p><strong>Single 1s:</strong> 100 points each</p>
+                        <p><strong>Single 5s:</strong> 50 points each</p>
+                        <p>
+                            <strong>Three of a kind:</strong> Number × 100
+                            (except three 1s = 1000)
+                        </p>
+                        <p>
+                            <strong>Four of a kind:</strong> Double the
+                            three-of-a-kind score
+                        </p>
+                        <p>
+                            <strong>Five of a kind:</strong> Triple the
+                            three-of-a-kind score
+                        </p>
+                        <p>
+                            <strong>Six of a kind:</strong> Quadruple the
+                            three-of-a-kind score
+                        </p>
+                        <p><strong>Straight (1–6):</strong> 1500 points</p>
+                        <p><strong>Three pairs:</strong> 1500 points</p>
+                        <p><strong>Two triplets:</strong> 2500 points</p>
+                        <p>
+                            <strong>Extra 1s or 5s:</strong> Score individually
+                            even in combinations
+                        </p>
+                        <p>
+                            <strong>Frozen dice:</strong> Only frozen scoring
+                            dice count
+                        </p>
+                        <p>
+                            <strong>Zilch:</strong> No scoring dice ends your
+                            turn at 0 points
+                        </p>
+                        <p>
+                            <strong>Cornering:</strong> Roll all six dice again
+                            if frozen, but risk losing turn points
+                        </p>
+                        <p>
+                            <strong>End of turn:</strong> Bank points any time
+                            before a zilch
+                        </p>
+                        <p>
+                            <strong>Passing dice:</strong> After ending, all
+                            dice go to the next player
+                        </p>
                     </div>
                 </div>
+                `
             </div>
         </main>
         <script src="app.js"></script>
